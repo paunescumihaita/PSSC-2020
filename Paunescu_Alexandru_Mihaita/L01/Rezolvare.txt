@@ -1,0 +1,6 @@
+StackOverflow este o platforma in care sunt intrebari si raspunsuri
+din IT.
+Aproape orice problema care se gaseste in programare este abordata 
+pe aceasta platforma
+Aceasta platforma odera si joburi, acest lucru nu il stiam.
+De multe ori si eu am apelat la aceasta platforma pentru niste probleme
