@@ -1,0 +1,16 @@
+Evenimente:
+-adaugare intrebare
+-adaugare comentariu
+-stergere intrebare
+-stergere comentariu
+-urmarire tag
+-adaugare semn de carte
+-aplicare job
+-votare intrebare
+Contexte:
+-context intrebare
+-context tag
+-context reputatie
+-context semn de carte
+-context vot
+-context raspuns
