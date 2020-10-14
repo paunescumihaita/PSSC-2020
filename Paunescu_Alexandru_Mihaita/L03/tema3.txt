@@ -1,0 +1,32 @@
+Question workflow
+Workflows:
+Bounded context: Question context
+ workflow: Add question
+  triggered by : user profile
+  input: Question form(title, format, body, tags)
+  output: new question accepted 
+  side effects: users is being notified
+Workflows documentation:
+ workflow : add question
+ input: question form
+ output: new question accepted
+
+//step 1
+validate question form
+if (question is invalid) then Stop
+
+//step2
+send email to confirm your question 
+//step 3
+return New question accepted and published
+ Substep: Validate question form
+  Input: Invalidated question form
+  Output: Validated question form
+  Dependencies: Confirmation message
+ validate title
+ validate body
+ admin review generation and answer
+ if(the response is affirmative)
+	then return validates question 
+	else retunr validation error
+ 
