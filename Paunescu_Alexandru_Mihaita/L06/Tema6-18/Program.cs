@@ -7,11 +7,11 @@ namespace Tema6_18
     {
         static void Main(string[] args)
         {
-            var wf = from createReplyResult in Domain.ValidateReply("1", "1", "test")
+            var wf = from createReplyResult in Domain.ValidateReply(1, 1, "test")
                      let validReply = (CreateReplyResult.ReplyValid)createReplyResult
                      from checkLanguageResult in Domain.CheckLanguage(validReply.Reply.Answer)
-                     from ownerAck in Domain.SendOwner("1", "1", "test")
-                     from authorAck in Domain.SendAuthor("1", "1", "test")
+                     from ownerAck in Domain.SendOwner(1, 1, "test")
+                     from authorAck in Domain.SendAuthor(1, 1, "test")
                      select (validReply, checkLanguageResult, ownerAck, authorAck);
 
         }
