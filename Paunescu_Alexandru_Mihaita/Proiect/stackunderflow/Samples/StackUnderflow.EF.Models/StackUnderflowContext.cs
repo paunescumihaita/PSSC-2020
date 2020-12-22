@@ -23,6 +23,7 @@ namespace StackUnderflow.EF.Models
                select dbContext;
 
         public virtual DbSet<Badge> Badge { get; set; }
+        public virtual DbSet<Replay> Replay { get; set; }
         public virtual DbSet<Question> Question { get; set; }
         public virtual DbSet<Post> Post { get; set; }
         public virtual DbSet<PostTag> PostTag { get; set; }
@@ -297,6 +298,15 @@ namespace StackUnderflow.EF.Models
                 entity.Property(e => e.TextQuestion).HasMaxLength(255); 
                 entity.Property(e => e.TagQuestion).HasMaxLength(255);
              // 
+
+            });
+            modelBuilder.Entity<Replay>(entity =>
+            {
+                entity.HasKey(e => e.IdReplay);
+
+                entity.Property(e => e.TextReplay).HasMaxLength(255);
+             
+                // 
 
             });
 

@@ -11,6 +11,7 @@ namespace GrainImplementation
         public Task<string> SendEmailAsync(string message)
         {
             //todo send e-mail
+            Console.WriteLine("Am fost apelat");
 
             return Task.FromResult(message);
         }
