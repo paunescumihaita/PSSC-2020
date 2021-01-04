@@ -56,6 +56,7 @@ namespace StackUnderflow.Backoffice.Adapters.CreateTenant
             var question = new Question()
             {
                 IdQuestion = cmd.IdQuestion,
+                IdUser = cmd.IdUser,
                 TitluQuestion = cmd.TitluQuestion,
                 TextQuestion = cmd.TextQuestion,
                 TagQuestion = cmd.TagQuestion

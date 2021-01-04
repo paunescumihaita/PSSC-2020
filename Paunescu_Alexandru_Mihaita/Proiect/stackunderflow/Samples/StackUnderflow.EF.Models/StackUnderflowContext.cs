@@ -25,6 +25,7 @@ namespace StackUnderflow.EF.Models
         public virtual DbSet<Badge> Badge { get; set; }
         public virtual DbSet<Replay> Replay { get; set; }
         public virtual DbSet<Question> Question { get; set; }
+        public virtual DbSet<Utilizatori> Utilizatori { get; set; }
         public virtual DbSet<Post> Post { get; set; }
         public virtual DbSet<PostTag> PostTag { get; set; }
         public virtual DbSet<PostType> PostType { get; set; }
@@ -300,6 +301,17 @@ namespace StackUnderflow.EF.Models
              // 
 
             });
+
+            modelBuilder.Entity<Utilizatori>(entity =>
+            {
+                entity.HasKey(e => e.IdUser);
+
+                entity.Property(e => e.Email).HasMaxLength(255);
+                
+                // 
+
+            });
+
             modelBuilder.Entity<Replay>(entity =>
             {
                 entity.HasKey(e => e.IdReplay);

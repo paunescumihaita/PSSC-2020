@@ -35,8 +35,14 @@ namespace FakeSO.API.Rest
                          options.ServiceId = "OrleansBasics";
                      })
                     .ConfigureApplicationParts(
+                        parts => parts.AddApplicationPart(typeof(QuestionGrain).Assembly)
+                                .WithReferences())
+                    .ConfigureApplicationParts(
                         parts => parts.AddApplicationPart(typeof(EmailSenderGrain).Assembly)
-                                .WithReferences());
+                                .WithReferences())
+                    .ConfigureLogging(logging => logging.AddConsole())
+                .AddSimpleMessageStreamProvider("SMSProvider", options => { options.FireAndForgetDelivery = true; })
+                .AddMemoryGrainStorage("PubSubStore");
                 });
     }
 }

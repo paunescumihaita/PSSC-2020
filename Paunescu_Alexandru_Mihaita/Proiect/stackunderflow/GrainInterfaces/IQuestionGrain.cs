@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace GrainInterfaces
 {
-    public interface IEmailSender : IGrainWithIntegerKey
+    public interface IQuestionGrain : IGrainWithIntegerKey
     {
-        Task<string> SendEmailAsync(string email);
+        Task<string> GetQuestionWithReplays(int mess);
     }
 }

@@ -12,14 +12,17 @@ namespace StackUnderflow.Domain.Core.Contexts.Question
        [Key]
         public int IdQuestion { get; set; }
         [Required]
+        public int IdUser { get; set; }
+        [Required]
         public string TitluQuestion { get; set; }
         [Required]
         public string TextQuestion { get; set; }
         [Required]
         public string TagQuestion { get; set; }
-        public CreateQuestionCmd(int g,string a, string b, string c)
+        public CreateQuestionCmd(int g,int d,string a, string b, string c)
         {
             IdQuestion = g;
+            IdUser = d;
             TitluQuestion = a;
             TextQuestion = b;
             TagQuestion=c;

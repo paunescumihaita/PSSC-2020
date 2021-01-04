@@ -15,6 +15,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\GrainInterfaces\GrainInterfaces.csproj" />
+    <ProjectReference Include="..\Primitives\Access.Primitives.EFCore\Access.Primitives.EFCore.csproj" />
+    <ProjectReference Include="..\Samples\StackUnderflow.Core\StackUnderflow.Domain.Core.csproj" />
+    <ProjectReference Include="..\Samples\StackUnderflow.EF.Models\StackUnderflow.EF.csproj" />
+    <ProjectReference Include="..\Samples\StackUnderflow.Schema\StackUnderflow.DatabaseModel.csproj" />
   </ItemGroup>
 
 </Project>
